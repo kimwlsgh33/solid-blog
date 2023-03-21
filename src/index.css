@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "D2Coding";
+  font-style: normal;
+  src: url("./assets/fonts/D2Coding-Ver1.3.2-20180524-all.ttc")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "DOSMyungjo";
+  font-style: normal;
+  src: url("./assets/fonts/DOSMyungjo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DOSGothic";
+  font-style: normal;
+  src: url("./assets/fonts/DOSGothic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM BIOS";
+  font-style: normal;
+  src: url("./assets/fonts/Ac437_IBM_BIOS.ttf") format("truetype");
+}
+
+html {
+  font-family:"IBM BIOS", "DOSGothic", "DOSMyungjo", "D2Coding", sans-serif;
+}
+
+.bg-custom {
+  background: rgba(0, 0, 0, 0.2);
+}

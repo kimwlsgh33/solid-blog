@@ -1,39 +1,37 @@
 import { Component } from "solid-js";
-import styles from "../styles/App.module.css";
 import { A } from "@solidjs/router"; // 👈 Import the A component
+import Logo from "../assets/icons/logo.svg";
 
 const MyHeader: Component = () => {
   return (
-    <header class="p-6 items-center rounded-xl shadow-lg flex place-content-between">
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <div class="space-x-4">
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
+    <header class="flex items-center space-x-14">
+      <A
+        href="/"
+        activeClass="underlined"
+      >
+        <img class="w-10" src={Logo} alt="Logo" />
+      </A>
+      {[
+        ["Contact", "/contact"],
+        ["Download", "/download"],
+        ["My App", "/my-app"],
+        ["Login", "/login"],
+      ].map(([title, href]) => (
         <A
-          class={styles.link}
-          href="/about"
+          class="max-md:hidden"
+          href={href}
           activeClass="underlined"
         >
-          About
+          {title}
         </A>
-        {/* 👈 Add a link to the about page */}
-        <A
-          class={styles.link}
-          href="/contact"
-          activeClass="underlined"
-        >
-          Contact
-        </A>
-        {/* 👈 Add a link to the contact page */}
-      </div>
+      ))}
+      <A
+        class="bg-[#0D112B]/50 p-3 rounded-lg"
+        href="/get-started"
+        activeClass="underlined"
+      >
+        Get Started
+      </A>
     </header>
   );
 };

@@ -1,0 +1,15 @@
+import { Component } from "solid-js";
+
+const Contact:Component = () => {
+  return (
+    <>
+      <div class="grid place-items-center min-h-screen">
+        <div class="h1[160px] aspect aspect-[2] rounded-[16px] shadow-[0_0_0_4px_hsl(0_0%_0%_/_15%)]">
+          Contact
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Contact;

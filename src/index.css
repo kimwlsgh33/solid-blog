@@ -29,8 +29,5 @@
 
 html {
   font-family:"IBM BIOS", "DOSGothic", "DOSMyungjo", "D2Coding", sans-serif;
-}
-
-.bg-custom {
-  background: rgba(0, 0, 0, 0.2);
+  background: #0D112B;
 }
